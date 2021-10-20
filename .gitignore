@@ -253,3 +253,6 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
+
+# pdf output to save space
+*.pdf
