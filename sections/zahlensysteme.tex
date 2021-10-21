@@ -174,3 +174,30 @@
         \end{align*}
     \end{minipage}
 \end{center}
+
+\subsection{Division}
+\begin{center}
+    \begin{minipage}{0.7\linewidth}
+        \begin{enumerate}
+            \item Identifiziere Teil des Divident $>$ Divisor (Unterblock). Für jede Stelle, sodass Divident $<$ Divisor, 0 in Quotient.
+            \item Unterblock $-$ Divisor, 1 an Quotient anhängen, Rest behalten.
+            \item An das Resultat der Subtraktion Bits des Dividenten anhängen. Wiederholen bis Subtraktion 0 ergibt.
+        \end{enumerate}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.25\linewidth}
+        \begin{adjustbox}{angle=90}
+            \setlength{\tabcolsep}{0.3mm}
+            \footnotesize
+            \begin{tabular}{rcc|l}
+                \multicolumn{4}{c}{${\color{darkgreen}11100}:0111 = {\color{blue}0100}$}\\
+              \hline
+              ${\color{darkgreen}1}$ & \% & $111 = {\color{blue}0}$ & $R={\color{pastelviolet!50!red} 1}$\\
+              ${\color{pastelviolet!50!red} 1}{\color{darkgreen}1}$ & \% & $111 = {\color{blue}0}$ & $R={\color{pastelviolet!50!red}11}$\\
+              ${\color{pastelviolet!50!red} 11}{\color{darkgreen}1}$ & \% & $111 = {\color{blue}1}$ & $R={\color{pastelviolet!50!red}000}$\\
+              ${\color{pastelviolet!50!red} 000}{\color{darkgreen}0}$ & \% & $111 = {\color{blue}0}$ & $R={\color{pastelviolet!50!red}0000}$\\
+              ${\color{pastelviolet!50!red} 0000}{\color{darkgreen}0}$ & \% & $111 = {\color{blue}0}$ & $R={\color{pastelviolet!50!red}00000}$\\
+            \end{tabular}
+        \end{adjustbox}
+    \end{minipage}
+\end{center}
