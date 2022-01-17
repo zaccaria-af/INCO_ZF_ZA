@@ -69,6 +69,22 @@
     \end{tabular}
 \end{center}
 
+\subsubsection{Beispiel: Hexadezimal zu Dezimal}
+\begin{enumerate}
+    \item Umwandlung in Binär als Zwischenschritt. Dazu Tabelle verwenden.
+    \[
+        A23_{16} = 1010 0010 0011_2
+    \]
+    \item Umwandlung von Binär in Dezimal mittels 2er Potenzen
+    \[
+        2^{11}+2^9+2^5+2^1+2^0 = 2595_{10}
+    \] 
+    \item Bei einem signed Byte muss der Binärzahl zuerst ein Bit subtrahiert werden (Zweierkomplement bilden, dann addieren), dann invertiert. Danach die Zahl in Dezimal umwandeln und schliesslich ein Minus vor der Zahl setzen.
+\end{enumerate}
+
+\subsubsection{Modulare Arithmetik}
+Falls eine Aufgabe mit Modulo kommt, letzte Ziffern anschauen und dadurch teilbarkeit bestimmen.
+
 \begin{minipage}[t]{0.4\linewidth}
 \subsubsection*{Horner-Schema}
 	\begin{align*}
