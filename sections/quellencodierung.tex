@@ -69,3 +69,75 @@ Alle Zeichen werden durch Token fixer Länge ersetzt. Token: (Offset, Länge, Ze
 \begin{align*}
     \includegraphics[width=1\linewidth]{images/lzw.png}
 \end{align*}
+
+\subsection{Bildkompression - JPEG}
+
+\begin{center}
+    \includegraphics[width=1\linewidth]{images/verfahren.png}
+\end{center}
+
+\subsubsection{Kompressionsschritte}%
+
+\begin{enumerate}
+    \item Transformation Farbbilder RGB -> Luminanz, Chrominanz
+    \item Downsampling der beiden Chrominanz-Komponenten
+    \item Pixel-Gruppierung Farbkomponenten in 8x8 Blöcke
+    \item Direkte Cosinus Transformation (8x8 DCT)
+    \item Individuelle Quantisierung einzelner Frequenzkomponenten
+    \item Entropy-Coding der quantisierten Frequenzkomponenten
+    \item Erstellen von Header mit JPEG-Parametern
+\end{enumerate}
+
+\subsubsection{Luminanz und Chrominanz Farbmodell}
+
+\begin{center}
+    \includegraphics[width=1\linewidth]{images/lumchrom.png}
+\end{center}
+
+\subsubsection{Downsampling}
+
+Bei Downsampling werden in beiden Chrominanz-Ebenen in der Horizontalen oder Vertikalen mehrere Pixel zusammengefasst. \\
+\textbf{Beispiel: } 4:2:0, 4 bezeichnet hier die Breite des Referenzblocks, 2 bezeichnet wie viele Pixel nach dem Downsampling auf der ersten Zeile und 0 auf der zweiten Zeile vorliegen.
+\begin{center}
+    \includegraphics[width=1\linewidth]{images/downsampling.png}
+\end{center}
+
+\subsubsection{JPEG Blockverarbeitung}
+
+\begin{center}
+    \includegraphics[width=1\linewidth]{images/blockverarbeitung.png}
+\end{center}
+
+\subsubsection{DCT Basisfunktion}
+
+\begin{center}
+    \includegraphics[width=0.6\linewidth]{images/dct.png}
+\end{center}
+
+\begin{center}
+    \includegraphics[width=1\linewidth]{images/dctfunction.png}
+\end{center}
+
+\begin{center}
+    \includegraphics[width=1\linewidth]{images/dctblock.png}
+\end{center}
+
+\subsubsection{Quantisierung}%
+
+\begin{center}
+    \includegraphics[width=1\linewidth]{images/quantisierung.png}
+\end{center}
+
+\subsubsection{Entropy Encoder}
+
+\begin{center}
+    \includegraphics[width=1\linewidth]{images/entropy_encoding.png}
+\end{center}
+
+RLE: (DC Wert) (Anzahl Nullen, Koeffizient)...(EOB)
+
+\subsubsection{Dequantisierung}%
+
+\begin{center}
+    \includegraphics[width=1\linewidth]{images/dequantisierung.png}
+\end{center}
