@@ -141,3 +141,23 @@ RLE: (DC Wert) (Anzahl Nullen, Koeffizient)...(EOB)
 \begin{center}
     \includegraphics[width=1\linewidth]{images/dequantisierung.png}
 \end{center}
+
+\section{Audiocodierung}
+\begin{enumerate}
+    \item Um ein analoges Audio Signal digitalisieren zu können, muss es abgetastet (sample) und quantisiert werden.
+    \item Abtastung bedeutet, dass mit einer bestimmten Abtastfrequenz die Amplitude des Signals gemessen wird.
+    \item Quantisierung bedeutet, dass die Amplitude des Signals mit einer bestimmten Anzahl Bits gemessen wird und auf die nächst gelegene Zahl gerundet (quantisiert) wird.
+\end{enumerate}
+
+\subsection{Pulse Code Modulation}
+\subsubsection{Filterung}
+Mit Hilfe eines Filters werden die zu hohen und zu tiefen Frequenzen entfernt. Das Signal wird also auf einen hörbaren Frequenzbereich (20-20kHZ) begrenzt.
+\subsubsection{Abtastung}
+Die Abtastfrequenz muss mindestens \textbf{doppelt} so gross sein, wir die höchste im analogen Signal vorkommende Frequenz (\textbf{Abtasttheorem von Shannon}).
+\subsubsection{Quantisierung}
+Die Anzahl Bit, die für die Quantisierung verwendet werden, bestimmt die Anzahl Stufen, welche für die Messung der Amplitude zur Verfügung stehen.
+Der Quantisierungsfehler bezeichnet den Fehler, der entsteht wenn die gemessenen Werte gerundet werden.
+\subsubsection{Codierung}
+Jedem quantisierten Messwert wird ein Wert von einer bestimmten Bitlänge zugeordnet. \textbf{Bitstrom: } Anzahl bits pro Messwert multipliziert mit der Abtastfrequenz.
+
+\subsubsection{Spiegelung}
